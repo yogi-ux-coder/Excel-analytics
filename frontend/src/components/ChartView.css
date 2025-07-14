@@ -1,0 +1,55 @@
+.chart-view {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.chart-view h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #003366;
+  background-color: white;
+  color: #003366;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover,
+.button-group .active {
+  background-color: #003366;
+  color: white;
+}
+
+.chart-container {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: 0;
+}
+
+.no-data {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  padding: 100px 0;
+  font-size: 1.2rem;
+}
