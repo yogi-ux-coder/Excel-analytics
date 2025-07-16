@@ -13,7 +13,8 @@ const app = express();
 app.use(cors({
   origin: "https://excel-analytics-seven.vercel.app/", // Your frontend domain
   credentials: true
-}))
+}));
+
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api', excelRoutes);

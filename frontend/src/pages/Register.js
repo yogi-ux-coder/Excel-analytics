@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 // import './Login.css'; // Reuse same CSS for styling
 
 const Register = () => {
@@ -24,7 +24,7 @@ const Register = () => {
     setMessage('');
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const res = await api.post('http://localhost:5000/api/auth/register', formData);
       setMessage(res.data.message);
       // Redirect to login after short delay
       setTimeout(() => navigate('/login'), 1000);
