@@ -10,7 +10,10 @@ dotenv.config();
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: "https://excel-analytics-seven.vercel.app/", // Your frontend domain
+  credentials: true
+}))
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api', excelRoutes);

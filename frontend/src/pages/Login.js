@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../api';
 import { AuthContext } from '../context/AuthContext'; // ✅ Auth context
 
 const Login = () => {
@@ -24,7 +24,7 @@ const Login = () => {
     setLoading(true);
     setMessage('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', formData);
+      const res = await api.post('http://localhost:5000/api/auth/login', formData);
       const { token, user } = res.data;
 
       login(token); // ✅ Save token in context/localStorage
