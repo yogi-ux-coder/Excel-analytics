@@ -10,6 +10,11 @@ dotenv.config();
 const app = express();
 
 // Middlewares
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://excel-analytics-seven.vercel.app'
+];
+
 app.use(cors({
   origin: "https://excel-analytics-seven.vercel.app/", // Your frontend domain
   credentials: true
