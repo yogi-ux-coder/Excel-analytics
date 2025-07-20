@@ -24,7 +24,7 @@ const Register = () => {
     setMessage('');
     setLoading(true);
     try {
-      const res = await api.post('http://localhost:3000/login/api/auth/register', formData);
+      const res = await api.post('http://localhost:3000/api/auth/register', formData);
       setMessage(res.data.message);
       // Redirect to login after short delay
       setTimeout(() => navigate('/login'), 1000);
