@@ -24,7 +24,7 @@ const Login = () => {
     setLoading(true);
     setMessage('');
     try {
-      const res = await api.post("/api/auth/login", formData);
+      const res = await api.post('http://localhost:5000/api/auth/login', formData);
       const { token, user } = res.data;
 
       login(token); // ✅ Save token in context/localStorage
