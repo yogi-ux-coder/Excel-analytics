@@ -16,7 +16,10 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-  origin: "https://excel-analytics-seven.vercel.app/", // Your frontend domain
+  origin: [
+  'http://localhost:3000',
+  'https://excel-analytics-git-main-yogiraj-makar-s-projects.vercel.app'
+  ],
   credentials: true
 }));
 
